@@ -16,7 +16,7 @@ CHIBIOS = chibios
 SRC =	matrix.c \
 	keymap_common.c \
 	led.c \
-	user_hooks.c 
+	user_hooks.c
 
 ifdef KEYMAP
     SRC := keymap_$(KEYMAP).c $(SRC)
@@ -83,11 +83,11 @@ OPT_DEFS = -DCORTEX_VTOR_INIT=0x00002000
 #
 #BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration
 ## (Note that for BOOTMAGIC on Teensy LC you have to use a custom .ld script.)
-#MOUSEKEY_ENABLE = yes	# Mouse keys
-#EXTRAKEY_ENABLE = yes	# Audio control and System control
+MOUSEKEY_ENABLE = yes	# Mouse keys
+EXTRAKEY_ENABLE = yes	# Audio control and System control
 CONSOLE_ENABLE = yes	# Console for debug
 COMMAND_ENABLE = yes    # Commands for debug and configuration
-#SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
+SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
 #NKRO_ENABLE = yes	    # USB Nkey Rollover
 VISUALIZER_ENABLE = yes # Enable to customize the LCD and LEDS
 ifdef VISUALIZER_ENABLE

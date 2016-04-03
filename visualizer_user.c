@@ -126,7 +126,11 @@ void update_user_visualizer_state(visualizer_state_t* state) {
     // state->status.layer
     // state->status.default_layer
     // state->status.leds (see led.h for available statuses)
-    if (state->status.layer & 0x8) {
+    if (state->status.layer & 0x10) {
+        state->target_lcd_color = LCD_COLOR(0xB0, 0xB0, 0xFF);
+        state->layer_text = "Dave's";
+    }
+    else if (state->status.layer & 0x8) {
         state->target_lcd_color = LCD_COLOR(0xC0, 0xB0, 0xFF);
         state->layer_text = "Numpad";
     }

@@ -30,11 +30,11 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            HOME,
                                  BSPC,DEL, END,
         // right hand
-             FN6, 8,   9,   0, MINS, EQL,BSLS,
+               7, 8,   9,   0, MINS, EQL,BSLS,
              LBRC,Y,   U,   I,    O,   P,RBRC,
                   H,   J,   K,    L,SCLN,QUOT,
              FN0, N,   M,   COMM,DOT, SLSH,RSFT,
-                        FN4,RGUI, NO,   NO,  NO,
+                        FN4,RGUI, NO,   NO, FN2,
         RALT,RCTL,
         PGUP,
         PGDN,ENT, SPC
@@ -97,7 +97,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              TRNS,NO,  P7,  P8,  P9,  PMNS,BSPC,
                   NO,  P4,  P5,  P6,  PPLS,PENT,
              TRNS,NO,  P1,  P2,  P3,  PPLS,PENT,
-                       P0,  PDOT,SLSH,PENT,PENT,
+                       P0,  PDOT,SLSH,PENT,TRNS,
         TRNS,TRNS,
         TRNS,
         TRNS,TRNS,TRNS
@@ -155,5 +155,4 @@ const uint16_t fn_actions[] = {
     ACTION_LAYER_SET(0, ON_PRESS),                  // FN3 - set Layer0
     ACTION_LAYER_TAP_TOGGLE(4),                     // FN4 - switch to Layer4 for arrows/fn
     ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),          // FN5 - left-ctl or ESC when tapped
-    ACTION_LAYER_TAP_KEY(3, KC_7),                  // FN6- 7 or switch to Layer3 when tapped
 };
